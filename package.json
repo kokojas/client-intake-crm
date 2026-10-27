@@ -1,0 +1,34 @@
+{
+  "name": "client-intake-crm",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/start-cloud.mjs dev",
+    "setup:openai": "node scripts/save-openai-key.mjs",
+    "dev:demo": "node scripts/start-demo.mjs",
+    "dev:local": "node scripts/start-local.mjs",
+    "build": "next build",
+    "start": "node scripts/start-cloud.mjs start",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "check": "npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.118.0",
+    "lucide-react": "0.468.0",
+    "next": "16.4.3",
+    "openai": "7.44.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}
